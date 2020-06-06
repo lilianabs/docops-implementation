@@ -1,0 +1,8 @@
+site_name: An Implementation of Docs as Code
+theme:
+  name: material
+  favicon: images/typewriter.png 
+  logo: images/typewriter.png
+  palette:
+    primary: white
+    accent: white
