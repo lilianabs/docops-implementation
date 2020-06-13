@@ -8,10 +8,29 @@ Docs as Code is treating documentation as a software product. We use the same to
 
 ## How is the Process of Docs as Code?
 
-To deliver documentation as code, we follow a similar workflow as software development.
+To deliver documentation as code, we follow a similar process as software development. The following image shows the workflow of the implementation of Docs as Code:
+
+![docs-as-code-workflow](images/An-Implementation-of-Docs-as-Code.png)
 
 ## Tools
 
-## Contents
+There are several tools that we can use to implement docs as code. For this implementation, we use the following tools:
 
-*Step 1: Create the Static Site*
+* **Markdown:** Create our documents as plain text files and use a Markup language.
+* **VS Code:** Use an IDE to edit our documents. 
+* **Mkdocs:** Use a static site generator. 
+* **GitHub:** Use Git for file management and collaboration.
+* **HTMLProofer and Vale:** Test our documents. We check for missing links and use a prose linter.
+* **GitHub Actions:** Build and publish the documentation site continuously.
+
+We automatically deploy our documentation site after every commit we make.
+
+## How we Implement Docs as Code
+
+We need to set up and configure the tools mentioned in section Tools so that we can start creating documentation. In this tutorial we go throught the following steps to create our implementation:
+
+* **Step 1:** Create the Static Site.
+* **Step 2:** Create a GitHub repository.
+* **Step 3:** Add the Vale YAML Extension files.
+* **Step 4:** Create the continuous integration workflow.
+* **Step 5:** Create the continuous deployment workflow.
