@@ -1,0 +1,24 @@
+name: Continuous Integration
+
+on: [pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies and run tests
+        run: |
+          pip install -r requirements.txt
+      - run: mkdocs build
+
+      - name: HTMLProofer
+        uses: chabad360/htmlproofer@v1.1
+        with:
+          directory: "./site"
+          arguments: --disable-external

@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+# Tutorial
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+In this tutorial we describe an implementation of Docs as Code. First, we define what Docs as Code is and describe the process that we follow to develop documentation. Then, we list the tools that we use and we go through the process of configuring each one of them for this implementation.
 
-## Commands
+## What is Docs as Code?
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Docs as Code is treating documentation as a software product. We use the same tools that are used in software development—IDE, Git, and CI/CD—to write and publish a project's documentation. Also, we use the same tools that software developers use. As a result, we deliver the documentation in the same way we deliver software.
 
-## Project layout
+## How is the Process of Docs as Code?
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+To deliver documentation as code, we follow a similar workflow as software development.
+
+## Tools
+
+## Contents
+
+*Step 1: Create the Static Site*

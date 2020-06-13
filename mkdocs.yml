@@ -6,3 +6,7 @@ theme:
   palette:
     primary: white
     accent: white
+nav:
+  - Home: index.md
+  - Step 1 Create the Static Site Project: step1.md
+  - Step 2 Create a GitHub Repository: step2.md
