@@ -19,8 +19,11 @@ jobs:
           pip install -r requirements.txt
       - run: mkdocs build
 
-      - name: 'Deploy to Netlify'
-        uses: jsmrcaga/action-netlify-deploy@v1
+      - uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}$
+          # 5. "gatsby build" creates "public" folder, which is what we are deploying
+          args: deploy --dir=site --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
