@@ -1,0 +1,27 @@
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: Install dependencies and run tests
+        run: |
+          pip install -r requirements.txt
+      - run: mkdocs build
+
+      - name: 'Deploy to Netlify'
+        uses: jsmrcaga/action-netlify-deploy@v1
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}$
+        	NETLIFY_DEPLOY_TO_PROD: true
