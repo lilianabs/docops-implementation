@@ -1,9 +1,9 @@
-We implement a continuous integration workflow that includes the following steps:
+We implement a continuous integration (CI) workflow that includes the following stages:
 
-* Build the documentation site.
-* Validate the HTML output.
+* **Build** the documentation site.
+* **Validate** the HTML output.
 
-We use [GitHub Actions](https://github.com/features/actions) to implement this workflow. Everytime we create a pull request in the documentation site GitHub repository, GitHub Actions triggers the workflow we define below.
+We use [GitHub Actions](https://github.com/features/actions) to implement this workflow. Everytime we create a pull request in the documentation site GitHub repository, GitHub Actions triggers the workflow that we define below.
 
 It is possible to add Vale to the continuous integration workflow. However, for this implementations we run Vale locally before we commit and push our updates to the GitHub repository of our documentation site.
 
