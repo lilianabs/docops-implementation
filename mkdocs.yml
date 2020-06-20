@@ -12,4 +12,4 @@ nav:
   - Step 2 Create a GitHub Repository: step2.md
   - Step 3 Add the Vale YAML Extension files: step3.md
   - Step 4 Create the continuous integration workflow: step4.md
-  - Step 5 Create the deployment integration workflow: step5.md
+  - Step 5 Create the continuous deployment workflow: step5.md
